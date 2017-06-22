@@ -1,0 +1,10 @@
+@RestController
+public class MySpringRestAPIController{
+
+private final String template = "Hello %s !";
+private final counter = new AtomicLong();
+
+@RequestMapper("/greetings")
+Public String greeting(@RequestParam(value="name", defaultvalue="World") String name){
+ return String.format(template, name);
+}
